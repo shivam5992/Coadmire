@@ -1,20 +1,21 @@
 {% extends "template.html" %}
 {% block content %}
 
-{%	for post in collection.find() %}
-	<h2>{{ post.question }}</h2>
-	<form action="" method="post">
+	<h2>{{ doc.question }}</h2>
+	<form action="" method="POST">
 	<select name="ques">
-		<option value="{{ post.optiona }}">{{ post.optiona }}</option>
-		<option value="{{ post.optionb }}">{{ post.optionb }}</option>
-		<option value="{{ post.optionc }}">{{ post.optionc }}</option>
-		<option value="{{ post.optiond }}">{{ post.optiond }}</option>
+		<option value="{{ doc.optiona }}">{{ doc.optiona }}</option>
+		<option value="{{ doc.optionb }}">{{ doc.optionb }}</option>
+		<option value="{{ doc.optionc }}">{{ doc.optionc }}</option>
+		<option value="{{ doc.optiond }}">{{ doc.optiond }}</option>
 	</select>
 	<p><input type="submit" value="submit"></p>
 	</form>
 
-	{% if error %}
-	<p class="error"><strong>Error:</strong>{{ error }}</p>
+{% if resp %}
+	<strong>Response:</strong>{{ resp }}</p>
 {% endif %}
-{% endfor %}
+
+
+
 {% endblock %}
