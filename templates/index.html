@@ -3,17 +3,18 @@
 
 {%	for post in collection.find() %}
 	<h2>{{ post.question }}</h2>
-	<li>
-		<a href="#">{{ post.optiona }}</a>
-	</li>
-	<li>
-		<a href="#">{{ post.optionb }}</a>
-	</li>
-	<li>
-		<a href="#">{{ post.optionc }}</a>
-	</li>
-	<li>
-		<a href="#">{{ post.optiond }}</a>
-	</li>
+	<form action="" method="post">
+	<select name="ques">
+		<option value="{{ post.optiona }}">{{ post.optiona }}</option>
+		<option value="{{ post.optionb }}">{{ post.optionb }}</option>
+		<option value="{{ post.optionc }}">{{ post.optionc }}</option>
+		<option value="{{ post.optiond }}">{{ post.optiond }}</option>
+	</select>
+	<p><input type="submit" value="submit"></p>
+	</form>
+
+	{% if error %}
+	<p class="error"><strong>Error:</strong>{{ error }}</p>
+{% endif %}
 {% endfor %}
 {% endblock %}
