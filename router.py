@@ -5,7 +5,7 @@ import random
 
 client = MongoClient()
 db = client.coadtest
-level_id = 1
+level_id = 2
 
 app = Flask(__name__)
 app.secret_key = 'shivam_bansal'
@@ -14,7 +14,7 @@ app.secret_key = 'shivam_bansal'
 def index(): 
 	resp = None
 
-	level_id = 1
+	level_id = 2
 
 	#level = "level" + str(level_id)
 	collection = db.level1
@@ -28,7 +28,7 @@ def index():
 			level_id += 1
 		else:
 			resp = 'you response is not correct'
-			# level_id -= 1
+			level_id -= 1
 	return render_template('index.html',resp = resp,doc =  doc)
 	
 if __name__ == '__main__' :
