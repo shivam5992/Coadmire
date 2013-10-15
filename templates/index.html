@@ -1,9 +1,10 @@
 {% extends "template.html" %}
 {% block content %}
 
-	<h2>{{ doc.question }}</h2>
 	<form action="" method="POST">
-	<select name="ques">
+	<input type="text" value="{{ doc.question }}" id="question" name="question"><h2>{{ doc.question }}</h2>
+	<select name="ques_response">
+		<option></option>
 		<option value="{{ doc.optiona }}">{{ doc.optiona }}</option>
 		<option value="{{ doc.optionb }}">{{ doc.optionb }}</option>
 		<option value="{{ doc.optionc }}">{{ doc.optionc }}</option>
@@ -13,9 +14,13 @@
 	</form>
 
 {% if resp %}
-	<strong>Response:</strong>{{ resp }}</p>
+	<strong>Prev Ques Response:</strong>{{ resp }}</p>
 {% endif %}
 
 
-
+{% for message in get_flashed_messages() %}
+	<div class=flash>
+		{{ message }}
+	</div>
+{% endfor %}
 {% endblock %}
