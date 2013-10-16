@@ -6,7 +6,7 @@ import random
 client = MongoClient()
 db = client.coadtest
 
-level_id = 1
+level_id = 0
 count = 0
 
 app = Flask(__name__)
@@ -16,6 +16,7 @@ app.secret_key = 'shivam_bansal'
 def index(): 
 	resp = None
 	global level_id
+	global count 
 
 	# previous question check
 	if request.method == 'POST':
@@ -26,18 +27,20 @@ def index():
 		A = pdoc['answer']
 		if request.form['ques_response'] == A:
 			resp = 'you response was correct'
-			if level_id != 4:
+			if level_id != 9:
 				level_id += 1
 		else:
 			resp = 'you response was not correct'
-			if level_id != 1:
+			if level_id != 0:
 				level_id -= 1
-
+	
+	count += 1
+	flash(count)
 	level = "level" + str(level_id)
 	collection = db[level]
 	Ques_id = random.randrange(1,5)
 	doc = collection.find_one({ '_id' : Ques_id })
-	return render_template('index.html',resp = resp,doc =  doc)
+	return render_template('index.html',doc =  doc)
 
 @app.route('/box')
 def box():
@@ -45,4 +48,3 @@ def box():
 	
 if __name__ == '__main__' :
 	app.run(debug=True)
-

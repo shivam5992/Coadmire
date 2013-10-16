@@ -1,26 +1,40 @@
 {% extends "template.html" %}
 {% block content %}
 
-	<form action="" method="POST">
-	<input type="text" value="{{ doc.question }}" id="question" name="question"><h2>{{ doc.question }}</h2>
-	<select name="ques_response">
-		<option></option>
-		<option value="{{ doc.optiona }}">{{ doc.optiona }}</option>
-		<option value="{{ doc.optionb }}">{{ doc.optionb }}</option>
-		<option value="{{ doc.optionc }}">{{ doc.optionc }}</option>
-		<option value="{{ doc.optiond }}">{{ doc.optiond }}</option>
-	</select>
-	<p><input type="submit" value="submit"></p>
-	</form>
+<div class="container">
+    
+    <div class="span12">
+    <h1 align=center> CoaAd Test</h1>
+        
+        <form action="" method="POST">
 
-{% if resp %}
-	<strong>Prev Ques Response:</strong>{{ resp }}</p>
-{% endif %}
+        <input type="text" value="{{ doc.question }}" id="hidden_question" name="question">
+        
+        	  {% for message in get_flashed_messages() %}
+            	<div class="flash lead">
+                	(Q.{{ message }}) {{ doc.question }} 
+                	Hello how are you what are you doing. Yes man wats up you brother !!!
+            	</div>
+        	{% endfor %}
+         
+        
+        <input type="radio" id="option1" name="ques_response" value="{{ doc.option1 }}">
+        <label for="option1">{{ doc.option1 }}</label><br>
+        
+        <input type="radio" id="option2" name="ques_response" value="{{ doc.option2 }}">
+        <label for="option2">{{ doc.option2 }}</label><br>
+        
+        <input type="radio" id="option3" name="ques_response" value="{{ doc.option3 }}">
+        <label for="option3">{{ doc.option3 }}</label><br>
+        
+        <input type="radio" id="option4" name="ques_response" value="{{ doc.option4 }}">
+        <label for="option4">{{ doc.option4 }}</label><br><br>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+       
 
-
-{% for message in get_flashed_messages() %}
-	<div class=flash>
-		{{ message }}
-	</div>
-{% endfor %}
+    </div>
+</div>
+   
 {% endblock %}
