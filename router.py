@@ -38,6 +38,10 @@ def index():
 	Ques_id = random.randrange(1,5)
 	doc = collection.find_one({ '_id' : Ques_id })
 	return render_template('index.html',resp = resp,doc =  doc)
+
+@app.route('/box')
+def box():
+	return render_template('box.html') 
 	
 if __name__ == '__main__' :
 	app.run(debug=True)
