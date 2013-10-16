@@ -3,7 +3,17 @@
 <title>{% block title %}{% endblock %}</title>
 <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="static/css/question-style.css" type="text/css">
-
+    
+	<script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript" src="static/js/jquery.countdown.js"></script>
+    <script type="text/javascript">
+    $(function() 
+    {
+        var endDate = "October 17, 2013 15:03:25";
+        $('.countdown.simple').countdown({ date: endDate });
+    });
+    </script>
+    
 </head>
 
 <body>	
