@@ -71,6 +71,7 @@ def index():
 	
 	count += 1
 	if count == max_questions+1:
+		count = 0
 		return render_template('finished.html')
 	else:	
 		flash(count)

@@ -19,10 +19,13 @@ input[type=radio] + label
     font-family: 'calibri';
     text-align:left;
 }
-
-input[type=radio] + label:hover 
+#fouroptions input[type=radio] + label:hover 
 { 
     background-color:#4BEB6B;
+}
+#skip input[type=radio] + label:hover
+{
+    background-color:#DE6D7C;
 }
 input[type=radio]:checked + label 
 { 
