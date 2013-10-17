@@ -56,11 +56,66 @@ q05 ={
 	'answer'	: 	'red',
 }
 
+q06 ={
+	'_id' 		: 	6,
+	'question' 		: 	'0 ques 6 ?',
+	'option1' 	: 	'red',
+	'option2' 	: 	'green',
+	'option3' 	: 	'blue',
+	'option4' 	: 	'pink',
+	'answer'	: 	'red',
+}
+
+q07 ={
+	'_id' 		: 	7,
+	'question' 		: 	'0 ques 7 ?',
+	'option1' 	: 	'red',
+	'option2' 	: 	'green',
+	'option3' 	: 	'blue',
+	'option4' 	: 	'pink',
+	'answer'	: 	'red',
+}
+
+q08 ={
+	'_id' 		: 	8,
+	'question' 		: 	'0 ques 8 ?',
+	'option1' 	: 	'red',
+	'option2' 	: 	'green',
+	'option3' 	: 	'blue',
+	'option4' 	: 	'pink',
+	'answer'	: 	'red',
+}
+
+q09 ={
+	'_id' 		: 	9,
+	'question' 		: 	'0 ques 9 ?',
+	'option1' 	: 	'red',
+	'option2' 	: 	'green',
+	'option3' 	: 	'blue',
+	'option4' 	: 	'pink',
+	'answer'	: 	'red',
+}
+
+q010 ={
+	'_id' 		: 	10,
+	'question' 		: 	'0 ques 10 ?',
+	'option1' 	: 	'red',
+	'option2' 	: 	'green',
+	'option3' 	: 	'blue',
+	'option4' 	: 	'pink',
+	'answer'	: 	'red',
+}
+
 collection.insert(q01)
 collection.insert(q02)
 collection.insert(q03)
 collection.insert(q04)
 collection.insert(q05)
+collection.insert(q06)
+collection.insert(q07)
+collection.insert(q08)
+collection.insert(q09)
+collection.insert(q010)
 
 collection1 = db.level1
 

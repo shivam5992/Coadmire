@@ -7,19 +7,50 @@ client = MongoClient()
 db = client.coadtest
 
 #set these variables
-max_questions = 30
+max_questions = 10
 positive_marks_for_question = 4
 negative_marks_for_question = 1
 
 level_id = 0
 count = 0
 user_score_so_far = 0
+questions_asked_so_far = []
 
 
 app = Flask(__name__)
 app.secret_key = 'shivam_bansal'
 
+#login Actions !!
+def login_required(test):
+	@wraps(test)
+	def wrap(*args, **kwargs):
+		if 'logged_in' in session:
+			return test(*args,**kwargs)
+		else:
+			flash('you need to login first')
+			return redirect(url_for('log'))
+	return wrap
+
+@app.route('/logout')
+def logout():
+	session.pop('logged_in',None)
+	flash('you were logged out')
+	return redirect (url_for('log'))
+
+@app.route('/log',methods=['GET','POST'])
+def log():
+	error = None 
+	if request.method == 'POST':
+		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+			error = 'Invalid credientials, Please try again'
+		else:
+			session['logged_in'] = True
+			return redirect(url_for('/'))
+	return render_template('log.html',error=error)
+
+
 @app.route('/',methods=['GET','POST'])
+@login_required
 def index(): 
 	resp = None
 	user_name = "shivam"
@@ -68,7 +99,7 @@ def index():
 		collection.insert(result_doc)
 		
 		
-	
+	# new question
 	count += 1
 	if count == max_questions+1:
 		count = 0
@@ -77,10 +108,17 @@ def index():
 		flash(count)
 		level = "level" + str(level_id)
 		collection = db[level]
+		
 		Ques_id = random.randrange(1,5)
+		this_ques = str(level_id)+"."+str(Ques_id)
+		
+		questions_asked_so_far.append(this_ques)
 		doc = collection.find_one({ '_id' : Ques_id })
-		return render_template('index.html',doc =  doc)
+		return render_template('index.html',doc =  doc)	
+		
  
+
+
 	
 if __name__ == '__main__' :
 	app.run(debug=True)

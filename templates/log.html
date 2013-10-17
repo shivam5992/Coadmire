@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block content %}
+
+    <div class="container" align="center">
+    	    <h1 align=center> COAD Test</h1>
+
+      <form class="form-signin" action="" method="POST">
+        <h2 class="form-signin-heading">Login</h2><br>
+<input type="text" class="form-control" placeholder="Email address" name="username" value="{{ request.form.username }}" autofocus><br><br>
+ <input type="password" class="form-control" name="password" placeholder="Password">
+    
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
+      <div align="center">
+      	{% if error %}
+			<p class="error"><strong>Error: </strong>{{ error }}</p>
+		{% endif %}
+
+
+		{% for message in get_flashed_messages() %}
+			<div class=flash>
+				{{ message }}
+			</div>
+		{% endfor %}
+	</div>
+	</div> 
+{% endblock %}
