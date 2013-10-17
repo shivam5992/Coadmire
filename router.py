@@ -16,7 +16,6 @@ count = 0
 user_score_so_far = 0
 questions_asked_so_far = []
 
-
 app = Flask(__name__)
 app.secret_key = 'shivam_bansal'
 
@@ -28,30 +27,29 @@ def login_required(test):
 			return test(*args,**kwargs)
 		else:
 			flash('you need to login first')
-			return redirect(url_for('log'))
+			return redirect(url_for('index'))
 	return wrap
 
 @app.route('/logout')
 def logout():
 	session.pop('logged_in',None)
 	flash('you were logged out')
-	return redirect (url_for('log'))
+	return redirect (url_for('index'))
 
-@app.route('/log',methods=['GET','POST'])
-def log():
+@app.route('/',methods=['GET','POST'])
+def index():
 	error = None 
 	if request.method == 'POST':
 		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
 			error = 'Invalid credientials, Please try again'
 		else:
 			session['logged_in'] = True
-			return redirect(url_for('/'))
-	return render_template('log.html',error=error)
+			return redirect(url_for('coadtest'))
+	return render_template('index.html',error=error)
 
-
-@app.route('/',methods=['GET','POST'])
+@app.route('/coadtest',methods=['GET','POST'])
 @login_required
-def index(): 
+def coadtest(): 
 	resp = None
 	user_name = "shivam"
 	user_id =  "10103475"
@@ -89,7 +87,7 @@ def index():
 		collection = db[userResponse]
 		result_doc ={
 		'userName' : user_name,
-		'UserId'  : user_id,
+		'UserId'  :  user_id,
 		'level':	 user_level,
 		'question' : user_question,
 		'answer' :   user_answer,
@@ -114,11 +112,7 @@ def index():
 		
 		questions_asked_so_far.append(this_ques)
 		doc = collection.find_one({ '_id' : Ques_id })
-		return render_template('index.html',doc =  doc)	
+		return render_template('coadtest.html',doc =  doc)	
 		
- 
-
-
-	
 if __name__ == '__main__' :
 	app.run(debug=True)
