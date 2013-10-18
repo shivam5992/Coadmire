@@ -82,8 +82,11 @@ h1.title
 	position:fixed;
 	top:100px;
 	left:280px;
-	height:300px;
+	height:280px;
 	background:#2D3B40;
+	text-align: justify;
+  	text-justify: newspaper;
+  	line-height: 25px;
 }
 .bf_content_text h2{
 	padding:30px 20px 5px 20px;
@@ -98,4 +101,13 @@ h1.title
 	color:#fff;
 }
 
-
+#home_text
+{
+	width:400px;
+	margin-left: 700px;
+	margin-top: 100px;
+	text-align: justify;
+  	text-justify: newspaper;
+  	line-height: 28px;
+  	font-size: 20px;
+}
