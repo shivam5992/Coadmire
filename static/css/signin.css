@@ -16,7 +16,7 @@ width:400px;
 }
 .btn:hover
 {
-      background: #1B88B3;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
 
 }
 .form-signin 
@@ -49,11 +49,30 @@ width:400px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   width:300px;
+
+   -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+    border:1px solid #000;
+
 }
 .form-signin input[type="password"] {
   margin-bottom: 30px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   width:300px;
+   -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+    border:1px solid #000;
 
+}
+.form-signin input[type="password"]:focus,.form-signin input[type="text"]:focus
+{
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  border:1px solid rgba(81, 203, 238, 1);
 }
