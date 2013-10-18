@@ -113,6 +113,10 @@ def coadtest():
 		questions_asked_so_far.append(this_ques)
 		doc = collection.find_one({ '_id' : Ques_id })
 		return render_template('coadtest.html',doc =  doc)	
+
+@app.route('/home')
+def home():
+	return render_template('home.html')	
 		
 if __name__ == '__main__' :
 	app.run(debug=True)
