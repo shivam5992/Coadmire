@@ -1,17 +1,9 @@
-CoAdTest
+CoadMire
 ========
 
-Computerised Adaptable Test
+Coadmire is an online Assesment Platform which features adaptability as the test progresses.
+It adapts according to the responses answered by the examinee. With every correct answer, level of questions increases.
+With every wrong answer, level of questions decreases.
 
-Developed using Flask, MongoDb and Bootstrap
-
-Online Test System with feature of adaptability.
-With every correct answer, level increases.
-With every wring answer, level decreases.
-
-Features to be implemented soon:
-
-Cheat Check,
-Random Answering,
-Emotional Intelligence of User,
-Admin Interface
+It is completly developed in Python.
+It Uses Flask Web FrameWork, MongoDb, Bootstrap.
