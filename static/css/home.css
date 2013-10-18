@@ -105,9 +105,17 @@ h1.title
 {
 	width:400px;
 	margin-left: 700px;
-	margin-top: 100px;
+	margin-top: 60px;
 	text-align: justify;
   	text-justify: newspaper;
   	line-height: 28px;
   	font-size: 20px;
+}
+#home_text a
+{
+	color:#1BB350;
+}
+#home_text a:hover
+{
+	color:#1B88B3;
 }
