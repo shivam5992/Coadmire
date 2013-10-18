@@ -1,28 +1,68 @@
-{% extends "template.html" %}
-{% block content %}
-
-    <div class="container" align="center">
-    	    <h1 align=center> COAD Test</h1>
-
-      <form class="form-signin" action="" method="POST">
-        <h2 class="form-signin-heading">Login</h2><br>
-<input type="text" class="form-control" placeholder="Email address" name="username" value="{{ request.form.username }}" autofocus><br><br>
- <input type="password" class="form-control" name="password" placeholder="Password">
-    
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
-
-      <div align="center">
-      	{% if error %}
-			<p class="error"><strong>Error: </strong>{{ error }}</p>
-		{% endif %}
-
-
-		{% for message in get_flashed_messages() %}
-			<div class=flash>
-				{{ message }}
+<head>
+<link rel="stylesheet" type="text/css" href="static/css/home.css" />
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+</head>
+<body>
+		<div id="bf_container" class="bf_container">
+			<div id="bf_page_menu" class="bf_menu" >
+				<h1 class="title">CoadMire</h1>
+				<ul>
+					<li><a href="#" data-content="home"><span class="bf_hover"></span><span>Coadmire</span></a></li>
+				<li><a href="#" data-content="about"><span class="bf_hover"></span><span>Algorithm</span></a></li>
+					<li><a href="#" data-content="menu"><span class="bf_hover"></span><span>BackEnd</span></a></li>
+				</ul>
 			</div>
-		{% endfor %}
-	</div>
-	</div> 
-{% endblock %}
+			<div class="bf_page" id="home" style="display:block;">
+				<div class="bf_content_text">
+					<h2 align="center">What It Is ?</h2>
+ <p>Coadmire is an online test platform developed and designed 
+	espically to give a better experince to both users and admins. It supports the 
+	feature of adaptability ie. dynamic level transitions while the test is in progress.
+	A nice User Interface is also designed using latest techs. </p>
+				</div>
+			</div>
+			<div class="bf_page" id="about">
+				<div class="bf_content_text">
+					<h2 align="center">How It Works ?</h2>
+					<p> Codemire test starts from basic level and progress according to the responses submitted
+						by the user. With every correct response, level increases by one and with every wrong a
+						answer, level decreases by one. All the responses are smartly captured in the database.
+					</p>
+				</div>
+			</div>
+			<div class="bf_page" id="menu">
+				<div class="bf_content_text">
+					<h2 align="center">Implementations</h2>
+					<p> Codemire is completly built using python's web framework "Flask" and Database support is 
+						driven by MongoDb. It's User Interface is designed using Twitter Bootstrap framework.
+						The complete app is deployed on Heroku Cloud.
+					</p>
+				</div>
+			</div>	
+
+			<div id="home_text">
+			<p>
+				CoadMire Is an Open Source online assessment platform that adapts according
+				to the examinee's ability level. It selects questions for the purpose of maximizing 
+				the precision of the exam based on what is known about the examinee from previous questions.
+				From the examinee's perspective, the difficulty of the exam seems to tailor itself to his or her level of ability. Since its Open Source, You can <b><a href="https://github.com/shivam5992/CoAdTest">Contribute</a> </b>as well.
+				
+
+
+			</p>
+<br><br>
+			<h2><a href="/login">Login and Demo</a> | 
+			<a href="#">Register</a>
+</h2>
+			<br><br>
+			Developed by <b><a href="http://shivambansal.com/">Shivam Bansal</a></b><br>
+			Check my <b><a href="http://shivambansal.com/">Portfolio</a></b> 
+			<br>
+
+		</div>
+		</div>
+
+		
+</body>
+		<script type="text/javascript" src="static/js/jquery.template.min.js"></script>

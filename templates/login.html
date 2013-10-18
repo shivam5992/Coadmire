@@ -1,10 +1,12 @@
-<head>
 <link rel="stylesheet" type="text/css" href="static/css/home.css" />
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-</head>
+<link href="static/css/signin.css" rel="stylesheet">
+
+
+
 <body>
-		<div id="bf_container" class="bf_container">
+<div id="bf_container" class="bf_container">
 			<div id="bf_page_menu" class="bf_menu" >
 				<h1 class="title">CoadMire</h1>
 				<ul>
@@ -41,27 +43,26 @@
 				</div>
 			</div>	
 
-			<div id="home_text">
-			<p>
-				CoadMire Is an Open Source online assessment platform that adapts according
-				to the examinee's ability level. It selects questions for the purpose of maximizing 
-				the precision of the exam based on what is known about the examinee from previous questions.
-				From the examinee's perspective, the difficulty of the exam seems to tailor itself to his or her level of ability. Since its Open Source, You can <b><a href="https://github.com/shivam5992/CoAdTest">Contribute</a> </b>as well.
-				
+<div class="login_container" align="center">
+     <form class="form-signin" action="" method="POST">
+       <h1 class="form-signin-heading">Login</h1><br>
+<input type="text" class="form-control" placeholder="Username" name="username"><br><br>
+ <input type="password" class="form-control" name="password" placeholder="Password">
+ <br>
+ <button class="btn" type="submit">Sign in</button>
+ </form>
 
-
-			</p>
-<br><br>
-			<h2><a href="/login">Login and Demo</a> | 
-			<a href="#">Register</a>
-</h2>
-			<br><br>
-			Developed by <b><a href="http://shivambansal.com/">Shivam Bansal</a></b><br>
-			Check my <b><a href="http://shivambansal.com/">Portfolio</a></b> 
-			<br>
-
-		</div>
-		</div>
+      <div align="center">
+      	{% if error %}
+			<p class="error"><strong>Error: </strong>{{ error }}</p>
+		{% endif %}
+		{% for message in get_flashed_messages() %}
+			<div class=flash>
+				{{ message }}
+			</div>
+		{% endfor %}
+	</div>
+</div> 
 
 		
 </body>

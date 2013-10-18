@@ -27,17 +27,17 @@ def login_required(test):
 			return test(*args,**kwargs)
 		else:
 			flash('you need to login first')
-			return redirect(url_for('index'))
+			return redirect(url_for('login'))
 	return wrap
 
 @app.route('/logout')
 def logout():
 	session.pop('logged_in',None)
 	flash('you were logged out')
-	return redirect (url_for('index'))
+	return redirect (url_for('login'))
 
-@app.route('/',methods=['GET','POST'])
-def index():
+@app.route('/login',methods=['GET','POST'])
+def login():
 	error = None 
 	if request.method == 'POST':
 		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
@@ -45,7 +45,7 @@ def index():
 		else:
 			session['logged_in'] = True
 			return redirect(url_for('coadtest'))
-	return render_template('index.html',error=error)
+	return render_template('login.html',error=error)
 
 @app.route('/coadtest',methods=['GET','POST'])
 @login_required
@@ -114,9 +114,9 @@ def coadtest():
 		doc = collection.find_one({ '_id' : Ques_id })
 		return render_template('coadtest.html',doc =  doc)	
 
-@app.route('/home')
-def home():
-	return render_template('home.html')	
+@app.route('/')
+def index():
+	return render_template('index.html')	
 		
 if __name__ == '__main__' :
 	app.run(debug=True)
