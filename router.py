@@ -2,14 +2,16 @@ from flask import *
 from functools import wraps
 from pymongo import MongoClient
 import random
+import datetime
 
 client = MongoClient()
 db = client.coadtest
 
 #set these variables
-max_questions = 10
+max_questions = 5
 positive_marks_for_question = 4
 negative_marks_for_question = 1
+duration = 1
 
 level_id = 0
 count = 0
@@ -47,6 +49,22 @@ def login():
 			session['logged_in'] = True
 			count = 0
 			questions_asked_so_far = []
+
+			current_hour = datetime.datetime.now().strftime("%H")
+			timer = int(current_hour)+duration
+			send_time = datetime.datetime.now().strftime("%B %d, %Y ") + str(timer) + datetime.datetime.now().strftime(":%M:%S")
+			
+			strtime = 'var endDate = "' + send_time + '";//'
+			new_content = ""
+			jsfile = open("static/js/timer.js", "rt")
+			for line in jsfile:
+  				new_content = new_content + line.replace("var endDate =",strtime)
+			jsfile.close()
+
+			f = open('static/js/timer.js','w')
+			f.write(new_content) 
+			f.close() 
+
 			return redirect(url_for('coadtest'))
 	return render_template('login.html',error=error)
 
@@ -108,11 +126,11 @@ def coadtest():
 		level = "level" + str(level_id)
 		collection = db[level]
 		
-		Ques_id = random.randrange(1,10)
+		Ques_id = random.randrange(1,5)
 		this_ques = level+"."+str(Ques_id)
 
 		while this_ques in questions_asked_so_far:
-			Ques_id = random.randrange(1,10)
+			Ques_id = random.randrange(1,5)
 			this_ques = level+"."+str(Ques_id)
 			
 		questions_asked_so_far.append(this_ques)
