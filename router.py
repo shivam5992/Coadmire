@@ -7,7 +7,7 @@ client = MongoClient()
 db = client.coadtest
 
 #set these variables
-max_questions = 1
+max_questions = 5
 positive_marks_for_question = 4
 negative_marks_for_question = 1
 
@@ -67,16 +67,13 @@ def coadtest():
 				level_id += 1
 			user_score_so_far += positive_marks_for_question
 		else:
-			#if request.form['ques_response'] != "not_answered":
+			if request.form['ques_response'] != "not_answered":	
+				if level_id != 0:
+					level_id -= 1
+				user_score_so_far -= negative_marks_for_question
 
-			if level_id != 0:
-				level_id -= 1
-			user_score_so_far -= negative_marks_for_question
-
-
-		
 		# store result for a particular user, store each question as docs
-		userResponse = "ReponseOf"+user_name+user_id
+		userResponse = "ResponseOf"+user_name+user_id
 		
 		user_level = level
 		user_question = request.form['question']
