@@ -9,7 +9,7 @@ collection.drop()
 
 q01 ={
 	'_id' 		: 	1,
-	'question' 		: 	'0 What is your ageWhat is your age What is your age What is your age What is your age What is your age What is your age What is your ageWhat What is your age ?',
+	'question' 		: 	'0 q1 ageWhat is your age What is your age What is your age What is your age What is your age What is your age What is your ageWhat What is your age ?',
 	'option1' 	: 	'21',
 	'option2' 	: 	'22',
 	'option3' 	: 	'23',
@@ -18,7 +18,7 @@ q01 ={
 }
 q02 ={
 	'_id' 		: 	2,
-	'question' 		: 	'0 What is your name ?',
+	'question' 		: 	'0 q2 ?',
 	'option1' 	: 	'af',
 	'option2' 	: 	'bd',
 	'option3' 	: 	'ca',
@@ -28,7 +28,7 @@ q02 ={
 
 q03 ={
 	'_id' 		: 	3,
-	'question' 		: 	'0 What is your class ?',
+	'question' 		: 	'0 q3 ?',
 	'option1' 	: 	'12',
 	'option2' 	: 	'11',
 	'option3' 	: 	'10',
@@ -38,7 +38,7 @@ q03 ={
 
 q04 ={
 	'_id' 		: 	4,
-	'question' 		: 	'0 What is your profession ?',
+	'question' 		: 	'0 q4 ?',
 	'option1' 	: 	'doc',
 	'option2' 	: 	'paint',
 	'option3' 	: 	'eng',
@@ -48,7 +48,7 @@ q04 ={
 
 q05 ={
 	'_id' 		: 	5,
-	'question' 		: 	'0 What is your color ?',
+	'question' 		: 	'0 q5 ?',
 	'option1' 	: 	'red',
 	'option2' 	: 	'green',
 	'option3' 	: 	'blue',

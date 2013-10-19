@@ -7,7 +7,7 @@ client = MongoClient()
 db = client.coadtest
 
 #set these variables
-max_questions = 5
+max_questions = 10
 positive_marks_for_question = 4
 negative_marks_for_question = 1
 
@@ -38,14 +38,15 @@ def logout():
 @app.route('/login',methods=['GET','POST'])
 def login():
 	error = None
-	global count 
+	global count
+	global questions_asked_so_far 
 	if request.method == 'POST':
 		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
 			error = 'Invalid credientials, Please try again'
 		else:
 			session['logged_in'] = True
 			count = 0
-			
+			questions_asked_so_far = []
 			return redirect(url_for('coadtest'))
 	return render_template('login.html',error=error)
 
@@ -99,7 +100,7 @@ def coadtest():
 		
 	# new question
 	count += 1
-	if count == max_questions+1:
+	if count == max_questions:
 		count = 0
 		return render_template('finished.html')
 	else:	
@@ -107,9 +108,13 @@ def coadtest():
 		level = "level" + str(level_id)
 		collection = db[level]
 		
-		Ques_id = random.randrange(1,5)
-		this_ques = str(level_id)+"."+str(Ques_id)
-		
+		Ques_id = random.randrange(1,10)
+		this_ques = level+"."+str(Ques_id)
+
+		while this_ques in questions_asked_so_far:
+			Ques_id = random.randrange(1,10)
+			this_ques = level+"."+str(Ques_id)
+			
 		questions_asked_so_far.append(this_ques)
 		doc = collection.find_one({ '_id' : Ques_id })
 		return render_template('coadtest.html',doc =  doc)	
