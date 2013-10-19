@@ -37,12 +37,15 @@ def logout():
 
 @app.route('/login',methods=['GET','POST'])
 def login():
-	error = None 
+	error = None
+	global count 
 	if request.method == 'POST':
 		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
 			error = 'Invalid credientials, Please try again'
 		else:
 			session['logged_in'] = True
+			count = 0
+			
 			return redirect(url_for('coadtest'))
 	return render_template('login.html',error=error)
 

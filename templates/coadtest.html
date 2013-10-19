@@ -1,9 +1,19 @@
 {% extends "template.html" %}
 {% block content %}
+   
+ <script type="text/javascript" src="static/js/jquery.countdown.js"></script>
+    <script type="text/javascript">
+    $(function() 
+    {
+        var endDate = "October 18, 2013 19:01:26 ";
+        $('.countdown.simple').countdown({ date: endDate });
+    });
+    </script>
 
 <div class="container">
-    <div class="countdown simple pull-right"></div>
-    <div class="span12">        
+    <div class="span12"> 
+        <div class="countdown simple pull-right"></div>
+       
     <h1 align=center> CoadMire</h1>
         <form action="" method="POST">
 
