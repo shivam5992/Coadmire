@@ -15,6 +15,7 @@ q01 ={
 	'option3' 	: 	'23',
 	'option4' 	: 	'24',
 	'answer'	: 	'21',
+	'level'		:   '0',
 }
 q02 ={
 	'_id' 		: 	2,
@@ -24,6 +25,7 @@ q02 ={
 	'option3' 	: 	'ca',
 	'option4' 	: 	'dq',
 	'answer'	: 	'bd',
+	'level'		:   '0',
 }
 
 q03 ={
@@ -34,6 +36,7 @@ q03 ={
 	'option3' 	: 	'10',
 	'option4' 	: 	'9',
 	'answer'	: 	'11',
+	'level'		:   '0',
 }
 
 q04 ={
@@ -44,6 +47,7 @@ q04 ={
 	'option3' 	: 	'eng',
 	'option4' 	: 	'web',
 	'answer'	: 	'doc',
+	'level'		:   '0',
 }
 
 q05 ={
@@ -54,6 +58,7 @@ q05 ={
 	'option3' 	: 	'blue',
 	'option4' 	: 	'pink',
 	'answer'	: 	'red',
+	'level'		:   '0',
 }
 
 q06 ={

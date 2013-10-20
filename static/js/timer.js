@@ -1,5 +1,5 @@
     $(function() 
     {
-        var endDate = "October 19, 2013 24:40:16";// "October 19, 2013 24:36:28";// "October 19, 2013 24:26:30";// "October 20, 2013 12:23:22";
+        var endDate = "October 20, 2013 3:23:44";// "October 20, 2013 3:23:06";// "October 20, 2013 3:22:30";// "October 20, 2013 3:21:03";// "October 20, 2013 3:20:20";// "October 20, 2013 3:18:43";// "October 20, 2013 3:17:11";// "October 20, 2013 3:15:44";// "October 20, 2013 3:14:16";// "October 20, 2013 3:13:38";// "October 20, 2013 3:12:19";// "October 20, 2013 3:11:38";// "October 20, 2013 3:08:03";// "October 20, 2013 3:05:24";// "October 20, 2013 3:03:58";// "October 20, 2013 3:02:36";// "October 20, 2013 3:02:13";// "October 20, 2013 3:01:20";// "October 20, 2013 3:00:39";// "October 20, 2013 2:59:56";// "October 20, 2013 2:58:33";// "October 20, 2013 2:57:52";// "October 20, 2013 2:57:07";// "October 20, 2013 2:56:21";// "October 20, 2013 2:54:08";// "October 20, 2013 2:51:29";// "October 20, 2013 2:47:59";// "October 20, 2013 2:39:31";// "October 20, 2013 2:29:21";// "October 20, 2013 2:25:35";// "October 20, 2013 2:11:26";// "October 20, 2013 2:10:00";// "October 20, 2013 1:28:41";// "October 20, 2013 1:16:15";// "October 20, 2013 1:01:48";
         $('.countdown.simple').countdown({ date: endDate });
     });
