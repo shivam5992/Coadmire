@@ -1,19 +1,16 @@
-{% extends "template.html" %}
+{% extends "template.html" %} 
 {% block content %}
-
 <div id="instructions">
-    <h1 align=center> Instructions </h1>
-    <p> <br>
-    	1. There are total of 30 Multiple Choice Question. Each having four choices, only one of which is correct.
-    	<br><br>2. For every corect marks, 4 marks will be avoided, 1 mark will be deducted for every wrong answer and No mark will be awarded for skipping the question.
-    	<br><br>3. Duration of test is 1 hour.
-
-    	<br><br>4. Do not press Back Button or Refresh, this will lead to anamolous responses for your score.
-<br> <br>   	5. All the best. Click Start Button to start the test.
-   <br> <br>	 
+    <h1 style="text-align: center">Instructions</h1>
+    <p><br>
+    1. There are total of 30 Multiple Choice Question. Each having four choices, only one of which is correct.<br><br>
+    2. For every corect marks, 4 marks will be avoided, 1 mark will be deducted for every wrong answer and No mark will be awarded for skipping the question.<br><br>
+    3. Duration of test is 1 hour.<br><br>
+    4. Do not press Back Button or Refresh, this will lead to anamolous responses for your score.<br><br>
+    5. All the best. Click Start Button to start the test.<br><br>
     </p>
-     <div align="center"><a href="/login"><button class="butn" type="submit">Back</button></a></div>
-
+    <div style="text-align: center">
+      <a href="/login"><button class="butn" type="submit">Back</button></a>
+    </div>
 </div>
-
 {% endblock %}

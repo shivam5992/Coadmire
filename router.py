@@ -8,7 +8,7 @@ client = MongoClient()
 db = client.coadtest
 
 #set these variables
-max_questions = 5
+max_questions = 4
 positive_marks_for_question = 4
 negative_marks_for_question = 1
 duration = 1

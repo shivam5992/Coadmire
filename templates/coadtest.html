@@ -1,14 +1,9 @@
 {% extends "template.html" %}
 {% block content %}
-
  <script type="text/javascript" src="static/js/jquery.countdown.js"></script>
  <script type="text/javascript" src="static/js/timer.js"></script>
-
-
 <div class="container">
-    <div > 
-        <div class="countdown simple pull-right"></div>
-
+    <div class="countdown simple pull-right"></div>
     <h1 align=center> CoadMire </h1><br>
         <form action="" method="POST">
             <input type="text" value="{{ doc.question }}" id="hidden_question" name="question">
@@ -20,33 +15,21 @@
             	</div>
         	{% endfor %}
         <div id="level_disp"><font color="red"><b>Level</b></font> = <font color="green">{{ doc.level }}</font></div>
-
         <div id="fouroptions">
-
         <input type="radio" id="option1" name="ques_response" value="{{ doc.option1 }}" required>
         <label for="option1">{{ doc.option1 }}</label><br>
-
         <input type="radio" id="option2" name="ques_response" value="{{ doc.option2 }}" required>
         <label for="option2">{{ doc.option2 }}</label><br>
-        
         <input type="radio" id="option3" name="ques_response" value="{{ doc.option3 }}" required>
         <label for="option3">{{ doc.option3 }}</label><br>
-        
         <input type="radio" id="option4" name="ques_response" value="{{ doc.option4 }}" required>
         <label for="option4">{{ doc.option4 }}</label><br>
-        
         <input type="radio" id="option5" name="ques_response" value="not_answered" required>
         <label for="option5">Skip This Question</label>
         </div>
-
         <br>
-        
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-       
-
     </div>
-
 </div>
-   
 {% endblock %}
