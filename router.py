@@ -5,7 +5,7 @@ import random
 import datetime
 
 client = MongoClient()
-db = client.coadtest
+db = client.coadmire
 
 #set these variables
 max_questions = 4
@@ -145,6 +145,20 @@ def index():
 def instructions():
 	return render_template('instructions.html')
 
+def insert_doc(admin_collection,admin_doc):
+    admin_doc['_id'] = str(db.seqs.find_and_modify(
+        query={'colection': 'admin_collection'},
+        update={'$inc': {'id': 1}},
+        fields={'id': 1, '_id': 0},
+        new=True 
+    ).get('id'))
+
+    try:
+        db.admin_collection.insert(admin_doc)
+
+    except pymongo.errors.DuplicateKeyError as e:
+        insert_doc(admin_doc)
+
 @app.route('/admin',methods=['GET','POST'])
 def admin():
 	if request.method == 'POST':
@@ -155,14 +169,14 @@ def admin():
 		admin_option4 = request.form['option4']
 		admin_answer = request.form['answer']
 		admin_level = request.form['level']
-
+		
 		admin_collection = db[admin_level]
-		admin_temp = db.admin_collection.find().sort( [("_id", -1)] ).limit(1)
-		print(admin_temp)
-		admin_id = admin_temp["_id"] + 1
+
+		#admin_temp = db.admin_collection.find().sort( [("_id", -1)] ).limit(1)
+		#for ad_doc in admin_temp:
+		#	ad_doc['_id'] = str(int(ad_doc['_id']) + 1)
 
 		admin_doc ={
-		'_id' 		: 	admin_id,
 		'question' 	: 	admin_quesion,
 		'option1' 	: 	admin_option1,
 		'option2' 	: 	admin_option2,
@@ -171,8 +185,9 @@ def admin():
 		'answer'	: 	admin_answer,
 		'level'		:   admin_level,
 		}
-		admin_collection.insert(admin_doc)
-		flash("inserted")
+
+		insert_doc(admin_collection,admin_doc)
+
 	return render_template('admin.html')
 		
 if __name__ == '__main__' :

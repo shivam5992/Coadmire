@@ -36,4 +36,10 @@
 <input type="submit">
 </form>
 
+{% for message in get_flashed_messages() %}
+                <div class="flash lead">
+                    <b><font color="red">{{ message }}</font>
+                </div>
+            {% endfor %}
+
 

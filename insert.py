@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import codecs
 
 client = MongoClient()
-db = client.coadtest
+db = client.coadmire
 
 collection = db.level0
 collection.drop()
