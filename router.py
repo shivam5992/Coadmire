@@ -145,20 +145,6 @@ def index():
 def instructions():
 	return render_template('instructions.html')
 
-def insert_doc(admin_collection,admin_doc):
-    admin_doc['_id'] = str(db.seqs.find_and_modify(
-        query={'colection': 'admin_collection'},
-        update={'$inc': {'id': 1}},
-        fields={'id': 1, '_id': 0},
-        new=True 
-    ).get('id'))
-
-    try:
-        db.admin_collection.insert(admin_doc)
-
-    except pymongo.errors.DuplicateKeyError as e:
-        insert_doc(admin_doc)
-
 @app.route('/admin',methods=['GET','POST'])
 def admin():
 	if request.method == 'POST':
@@ -176,7 +162,11 @@ def admin():
 		#for ad_doc in admin_temp:
 		#	ad_doc['_id'] = str(int(ad_doc['_id']) + 1)
 
+		ida = admin_collection.count()
+		admin_id = ida+1
+
 		admin_doc ={
+		'_id'		: 	admin_id,
 		'question' 	: 	admin_quesion,
 		'option1' 	: 	admin_option1,
 		'option2' 	: 	admin_option2,
@@ -186,7 +176,7 @@ def admin():
 		'level'		:   admin_level,
 		}
 
-		insert_doc(admin_collection,admin_doc)
+		admin_collection.insert(admin_doc)
 
 	return render_template('admin.html')
 		
