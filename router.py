@@ -12,8 +12,10 @@ max_questions = 10
 positive_marks_for_question = 4
 negative_marks_for_question = 1
 duration = 1
+max_level = 5
+min_level = 1
 
-level_id = 0
+level_id = 1
 count = 0
 user_score_so_far = 0
 questions_asked_so_far = []
@@ -85,12 +87,12 @@ def coadtest():
 		pdoc = pcollection.find_one({ 'question' : Q })
 		A = pdoc['answer']
 		if request.form['ques_response'] == A:
-			if level_id != 9:
+			if level_id != max_level:
 				level_id += 1
 			user_score_so_far += positive_marks_for_question
 		else:
 			if request.form['ques_response'] != "not_answered":	
-				if level_id != 0:
+				if level_id != min_level:
 					level_id -= 1
 				user_score_so_far -= negative_marks_for_question
 
@@ -118,7 +120,7 @@ def coadtest():
 		
 	# new question
 	count += 1
-	if count == max_questions:
+	if count == max_questions+1:
 		count = 0
 		return render_template('finished.html')
 	else:	
@@ -126,11 +128,11 @@ def coadtest():
 		level = "level" + str(level_id)
 		collection = db[level]
 		
-		Ques_id = random.randrange(1,10)
+		Ques_id = random.randrange(1,max_questions)
 		this_ques = level+"."+str(Ques_id)
 
 		while this_ques in questions_asked_so_far:
-			Ques_id = random.randrange(1,10)
+			Ques_id = random.randrange(1,max_questions)
 			this_ques = level+"."+str(Ques_id)
 			
 		questions_asked_so_far.append(this_ques)

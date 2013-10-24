@@ -4,11 +4,11 @@ import codecs
 client = MongoClient()
 db = client.coadmire
 
-collection = db.level0
+collection = db.level1
 collection.drop()
 q01 ={
         "_id" : 1,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What does HTML stand for ?",
         "answer"   : "Hyper Text Markup Language",
         "option1" : "Hyper Text Markup Language",
@@ -19,7 +19,7 @@ q01 ={
 }
 q02 ={
         "_id" : 2,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What is the HTML element to bold a text?",
         "answer"   : "<b>",
         "option1" : "<b>",
@@ -30,7 +30,7 @@ q02 ={
 }
 q03 ={
         "_id" : 3,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What does HTML stand for ?",
         "answer"   : "Hyper Text Markup Language",
         "option1" : "Hyper Text Markup Language",
@@ -41,7 +41,7 @@ q03 ={
 }
 q04 ={
         "_id" : 4,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What is the correct HTML tag for a new paragraph?",
         "answer"   : "<p>",
         "option1" : "<para>",
@@ -52,7 +52,7 @@ q04 ={
 }
 q05 ={
         "_id" : 5,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What property do you use to create spacing between HTML elements?",
         "answer"   : "margin",
         "option1" : "padding",
@@ -63,7 +63,7 @@ q05 ={
 }
 q06 ={
         "_id" : 6,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "For users that use the tab key to navigate websites, what property shows moving from one element to another using this behavior?",
         "answer"   : "a:visited",
         "option1" : "a:hover",
@@ -74,7 +74,7 @@ q06 ={
 }
 q07 ={
         "_id" : 7,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "The acronym CSS stands for what?",
         "answer"   : "Cascading Style Sheets",
         "option1" : "Cascading Style Sheets",
@@ -85,7 +85,7 @@ q07 ={
 }
 q08 ={
         "_id" : 8,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What property would you use to change the list style to show roman numerals instead of normal numbers?",
         "answer"   : "list-style-type:upper-roman;",
         "option1" : "list-style-type:upper-roman;",
@@ -96,7 +96,7 @@ q08 ={
 }
 q09 ={
         "_id" : 9,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What property can you use to set the spacing in between lines of text?",
         "answer"   : "line-height",
         "option1" : "line-spacing",
@@ -107,7 +107,7 @@ q09 ={
 }
 q010 ={
         "_id" : 10,
-        "level" : "level0",
+        "level" : "level1",
         "question" : "What property do you use to set the background color of an image?",
         "answer"   : "background-color",
         "option1" : "color",
@@ -127,11 +127,11 @@ collection.insert(q08)
 collection.insert(q09)
 collection.insert(q010)
 
-collection = db.level1
+collection = db.level2
 collection.drop()
 q01 ={
         "_id" : 1,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "What does PHP stand for?",
         "answer"   : "PHP: Hypertext Preprocessor",
         "option1" : "Processor Handling Program",
@@ -142,7 +142,7 @@ q01 ={
 }
 q02 ={
         "_id" : 2,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "Which extension is not a correct PHP file extension?",
         "answer"   : ".php",
         "option1" : ".phtml",
@@ -153,7 +153,7 @@ q02 ={
 }
 q03 ={
         "_id" : 3,
-        "level" : "level1",
+        "level" : "level2",
         "question" : " Which of the following is the way to create comments in PHP?",
         "answer"   : "/* commented code here */",
         "option1" : "// commented code to end of line",
@@ -164,7 +164,7 @@ q03 ={
 }
 q04 ={
         "_id" : 4,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "Which of the following is used to declare a constant",
         "answer"   : "const",
         "option1" : "#pragma",
@@ -175,7 +175,7 @@ q04 ={
 }
 q05 ={
         "_id" : 5,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "The following are components of a database except ________ .",
         "answer"   : "reports",
         "option1" : "user data",
@@ -186,7 +186,7 @@ q05 ={
 }
 q06 ={
         "_id" : 6,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "SQL stands for ________ .",
         "answer"   : "Structured Query Language",
         "option1" : "Sequential Query Language",
@@ -197,7 +197,7 @@ q06 ={
 }
 q07 ={
         "_id" : 7,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "The command to remove rows from a table 'CUSTOMER' is:",
         "answer"   : "'DELETE FROM CUSTOMER WHERE'",
         "option1" : "REMOVE FROM CUSTOMER",
@@ -208,7 +208,7 @@ q07 ={
 }
 q08 ={
         "_id" : 8,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "SQL data definition commands make up a(n) ________ .",
         "answer"   : "DDL",
         "option1" : "DDM",
@@ -219,7 +219,7 @@ q08 ={
 }
 q09 ={
         "_id" : 9,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "Which of the following is valid SQL for an Index?",
         "answer"   : "CREATE INDEX ID",
         "option1" : "REMOVE INDEX ID",
@@ -230,7 +230,7 @@ q09 ={
 }
 q010 ={
         "_id" : 10,
-        "level" : "level1",
+        "level" : "level2",
         "question" : "Which one of the following sorts rows in SQL?",
         "answer"   : "ORDER BY",
         "option1" : "SORT BY",
@@ -249,3 +249,373 @@ collection.insert(q07)
 collection.insert(q08)
 collection.insert(q09)
 collection.insert(q010)
+
+collection = db.level3
+collection.drop()
+q01 ={
+        "_id" : 1,
+        "level" : "level3",
+        "question" : "Which is a reserved word in the Java programming language?",
+        "answer"   : "native",
+        "option1" : "subclasses",
+        "option3" : "native",
+        "option2" : "method",
+        "option4" : "reference"
+
+}
+q02 ={
+        "_id" : 2,
+        "level" : "level3",
+        "question" : "Which is a valid keyword in java?",
+        "answer"   : "interface",
+        "option1" : "string",
+        "option3" : "float",
+        "option2" : "interface",
+        "option4" : "unsigned"
+
+}
+q03 ={
+        "_id" : 3,
+        "level" : "level3",
+        "question" : "Which one of the following will declare an array and initialize it with five numbers?",
+        "answer"   : "int [] a = {23,22,21,20,19};",
+        "option1" : "Array a = new Array(5);",
+        "option3" : "int [] a = {23,22,21,20,19};",
+        "option2" : "int a [] = new int[5];",
+        "option4" : "int [5] array;"
+
+}
+q04 ={
+        "_id" : 4,
+        "level" : "level3",
+        "question" : "What is the most restrictive access modifier that will allow members of one class to have access to members of another class in the same package?",
+        "answer"   : "default access",
+        "option1" : "public",
+        "option3" : "protected",
+        "option2" : "abstract",
+        "option4" : "default access"
+
+}
+q05 ={
+        "_id" : 5,
+        "level" : "level3",
+        "question" : "Which is the valid declarations within an interface definition?",
+        "answer"   : "public double methoda();",
+        "option1" : "public final double methoda();",
+        "option3" : "static void methoda(double d1);",
+        "option2" : "protected void methoda(double d1);",
+        "option4" : "public double methoda();"
+
+}
+q06 ={
+        "_id" : 6,
+        "level" : "level3",
+        "question" : "Which one is a valid declaration of a boolean?",
+        "answer"   : "boolean b3 = false;",
+        "option1" : "boolean b1 = 0;",
+        "option3" : "boolean b2 = 'false';",
+        "option2" : "boolean b3 = false;",
+        "option4" : "boolean b4 = Boolean.false();"
+
+}
+q07 ={
+        "_id" : 7,
+        "level" : "level3",
+        "question" : "Which is a valid declarations of a String?",
+        "answer"   : "String s1 = null;",
+        "option1" : "String s2 = 'null';",
+        "option3" : "String s3 = (String) 'abc';",
+        "option2" : "String s1 = null;",
+        "option4" : "String s4 = (String) '\ufeed';"
+
+}
+q08 ={
+        "_id" : 8,
+        "level" : "level3",
+        "question" : "What is the numerical range of a char?",
+        "answer"   : "0 to 65535",
+        "option1" : "-128 to 127",
+        "option3" : "0 to 32767",
+        "option2" : "-(215) to (215) - 1",
+        "option4" : "0 to 65535"
+
+}
+q09 ={
+        "_id" : 9,
+        "level" : "level3",
+        "question" : "You want subclasses in any package to have access to members of a superclass. Which is the most restrictive access that accomplishes this objective?",
+        "answer"   : "protected",
+        "option1" : "public",
+        "option3" : "protected",
+        "option2" : "transient",
+        "option4" : "private"
+
+}
+q010 ={
+        "_id" : 10,
+        "level" : "level3",
+        "question" : "What is the prototype of the default constructor?",
+        "answer"   : "public Test( )",
+        "option1" : "Test( )",
+        "option3" : "public Test( )",
+        "option2" : "public Test(void)",
+        "option4" : "Test(void)"
+
+}
+collection.insert(q01)
+collection.insert(q02)
+collection.insert(q03)
+collection.insert(q04)
+collection.insert(q05)
+collection.insert(q06)
+collection.insert(q07)
+collection.insert(q08)
+collection.insert(q09)
+collection.insert(q010)
+
+collection = db.level4
+collection.drop()
+q1 ={
+        "_id" : 1,
+        "level" : "level4",
+        "question" : "Which of the following function is more appropriate for reading in a multi-word string?",
+        "answer"   : "get()",
+        "option1" : "printf()",
+        "option3" : "scanf()",
+        "option2" : "gets()",
+        "option4" : "puts()"
+}
+
+q2 ={
+        "_id" : 2,
+        "level" : "level4",
+        "question" : "Which bitwise operator is suitable for checking whether a particular bit is on or off?",
+        "answer"   : "& operator",
+        "option1" : "&& operator",
+        "option3" : "& operator",
+        "option2" : "|| operator",
+        "option4" : "! operator"
+}
+
+q3 ={
+        "_id" : 3,
+        "level" : "level4",
+        "question" : "The keyword used to transfer control from a function back to the calling function is",
+        "answer"   : "return",
+        "option1" : "go back",
+        "option3" : "goto",
+        "option2" : "switch",
+        "option4" : "return"
+}
+
+q4 ={
+        "_id" : 4,
+        "level" : "level4",
+        "question" : "The library function used to find the last occurrence of a character in a string is",
+        "answer"   : "strrchr()",
+        "option1" : "strnstr()",
+        "option3" : "laststr()",
+        "option2" : "strrchr()",
+        "option4" : "strstr()"
+}
+
+q5 ={
+        "_id" : 5,
+        "level" : "level4",
+        "question" : "How will you free the allocated memory ?",
+        "answer"   : "free(var-name)",
+        "option1" : "remove(var-name)",
+        "option3" : "free(var-name)",
+        "option2" : "dalloc(var-name)",
+        "option4" : "delete(var-name)"
+}
+
+q6 ={
+        "_id" : 6,
+        "level" : "level4",
+        "question" : "Which one of the following provides conceptual support for function calls? ",
+        "answer"   : "The system stack",
+        "option1" : "The heap ",
+        "option3" : "The processor's registers ",
+        "option2" : "The system stack",
+        "option4" : "The data segment "
+}
+
+q7 ={
+        "_id" : 7,
+        "level" : "level4",
+        "question" : "Which one of the following is NOT a valid C identifier? ",
+        "answer"   : "1___",
+        "option1" : "___S",
+        "option3" : "1___",
+        "option2" : "___1",
+        "option4" : "___ "
+}
+
+q8 ={
+        "_id" : 8,
+        "level" : "level4",
+        "question" : " What is the advantage of #define over const?",
+        "answer"   : "Data type is flexible",
+        "option1" : "Data type is flexible",
+        "option3" : "  Can have a pointe",
+        "option2" : "Reduction in the size of the program",
+        "option4" : " Both (a) and (c)"
+}
+
+q9 ={
+        "_id" : 9,
+        "level" : "level4",
+        "question" : " Memory allocation using malloc() is done in?",
+        "answer"   : "Heap area",
+        "option1" : "Static area",
+        "option3" : " Stack area",
+        "option2" : "Heap area",
+        "option4" : "Both b & c"
+}
+
+q10 ={
+        "_id" : 10,
+        "level" : "level4",
+        "question" : " Memory allocation is done using ?",
+        "answer"   : "malloc",
+        "option1" : "function",
+        "option3" : "array",
+        "option2" : "pointer",
+        "option4" : "none of these"
+}
+
+collection.insert(q1)
+collection.insert(q2)
+collection.insert(q3)
+collection.insert(q4)
+collection.insert(q5)
+collection.insert(q6)
+collection.insert(q7)
+collection.insert(q8)
+collection.insert(q9)
+collection.insert(q10)
+
+collection = db.level5
+collection.drop()
+
+q1 ={
+        "_id" : 1,
+        "level" : "level5",
+        "question" : "Which of the following type of class allows only one object of it to be created?",
+        "answer"   : "Singleton class",
+        "option1" : "Virtual class",
+        "option3" : "Abstract class",
+        "option2" : "Singleton class",
+        "option4" : "Friend class"
+}
+
+q2 ={
+        "_id" : 2,
+        "level" : "level5",
+        "question" : "Which of the following is not a type of constructor?",
+        "answer"   : "Friend constructor",
+        "option1" : "Copy constructor",
+        "option3" : "Friend constructor",
+        "option2" : "Default constructor",
+        "option4" : "Parameterized constructor"
+}
+
+q3 ={
+        "_id" : 3,
+        "level" : "level5",
+        "question" : "cout is a/an __________ ",
+        "answer"   : "object",
+        "option1" : "function",
+        "option3" : "object",
+        "option2" : "macro",
+        "option4" : "operator"
+}
+
+q4 ={
+        "_id" : 4,
+        "level" : "level5",
+        "question" : "Which of the following concepts of OOPS means exposing only necessary information to client?",
+        "answer"   : "Data hiding",
+        "option1" : "Encapsulation",
+        "option3" : "Data binding",
+        "option2" : "Data hiding",
+        "option4" : "Abstraction"
+}
+
+q5 ={
+        "_id" : 5,
+        "level" : "level5",
+        "question" : "Which of the following cannot be friend?",
+        "answer"   : "Object",
+        "option1" : "Function",
+        "option3" : "Class",
+        "option2" : "Object",
+        "option4" : "Operator function"
+}
+
+q6 ={
+        "_id" : 6,
+        "level" : "level5",
+        "question" : "How many instances of an abstract class can be created?",
+        "answer"   : "0",
+        "option1" : "1",
+        "option3" : "0",
+        "option2" : "5",
+        "option4" : "13"
+}
+
+q7 ={
+        "_id" : 7,
+        "level" : "level5",
+        "question" : "Which of the following term is used for a function defined inside a class?",
+        "answer"   : "Member function",
+        "option1" : "Member Variable",
+        "option3" : "Member function",
+        "option2" : "Class function",
+        "option4" : "Classic function"
+}
+
+q8 ={
+        "_id" : 8,
+        "level" : "level5",
+        "question" : "How many types of polymorphisms are supported by C++?",
+        "answer"   : "2",
+        "option1" : "1",
+        "option3" : "2",
+        "option2" : "3",
+        "option4" : "4"
+}
+
+q9 ={
+        "_id" : 9,
+        "level" : "level5",
+        "question" : "Which of the following concepts means determining at runtime what method to invoke?",
+        "answer"   : "Dynamic binding",
+        "option1" : "Data hiding",
+        "option3" : "Dynamic Typing",
+        "option2" : "Dynamic loading",
+        "option4" : "Dynamic binding"
+}
+
+q10 ={
+        "_id" : 10,
+        "level" : "level5",
+        "question" : "Which of the following is not the member of class?",
+        "answer"   : "Friend function",
+        "option1" : "Const function",
+        "option3" : "Friend function",
+        "option2" : "Static function",
+        "option4" : "Virtual function"
+}
+
+collection.insert(q1)
+collection.insert(q2)
+collection.insert(q3)
+collection.insert(q4)
+collection.insert(q5)
+collection.insert(q6)
+collection.insert(q7)
+collection.insert(q8)
+collection.insert(q9)
+collection.insert(q10)
