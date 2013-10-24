@@ -6,111 +6,116 @@ db = client.coadmire
 
 collection = db.level0
 collection.drop()
-
 q01 ={
-	'_id' 		: 	1,
-	'question' 		: 	'0 q1 ageWhat is your age What is your age What is your age What is your age What is your age What is your age What is your ageWhat What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-	'level'		:   '0',
+        "_id" : 1,
+        "level" : "level0",
+        "question" : "What does HTML stand for ?",
+        "answer"   : "Hyper Text Markup Language",
+        "option1" : "Hyper Text Markup Language",
+        "option3" : "Home Tool Markup Language",
+        "option2" : "Hyperlinks and Text Markup Language",
+        "option4" : "None of these"
+
 }
 q02 ={
-	'_id' 		: 	2,
-	'question' 		: 	'0 q2 ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-	'level'		:   '0',
-}
+        "_id" : 2,
+        "level" : "level0",
+        "question" : "What is the HTML element to bold a text?",
+        "answer"   : "<b>",
+        "option1" : "<b>",
+        "option3" : "<bold>",
+        "option2" : "<wide>",
+        "option4" : "<big>"
 
+}
 q03 ={
-	'_id' 		: 	3,
-	'question' 		: 	'0 q3 ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-	'level'		:   '0',
-}
+        "_id" : 3,
+        "level" : "level0",
+        "question" : "What does HTML stand for ?",
+        "answer"   : "Hyper Text Markup Language",
+        "option1" : "Hyper Text Markup Language",
+        "option3" : "Home Tool Markup Language",
+        "option2" : "Hyperlinks and Text Markup Language",
+        "option4" : "None of these"
 
+}
 q04 ={
-	'_id' 		: 	4,
-	'question' 		: 	'0 q4 ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-	'level'		:   '0',
-}
+        "_id" : 4,
+        "level" : "level0",
+        "question" : "What is the correct HTML tag for a new paragraph?",
+        "answer"   : "<p>",
+        "option1" : "<para>",
+        "option3" : "<paragraph>",
+        "option2" : "<in>",
+        "option4" : "<p>"
 
+}
 q05 ={
-	'_id' 		: 	5,
-	'question' 		: 	'0 q5 ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-	'level'		:   '0',
-}
+        "_id" : 5,
+        "level" : "level0",
+        "question" : "What property do you use to create spacing between HTML elements?",
+        "answer"   : "margin",
+        "option1" : "padding",
+        "option3" : "margin",
+        "option2" : "spacing",
+        "option4" : "border"
 
+}
 q06 ={
-	'_id' 		: 	6,
-	'question' 		: 	'0 ques 6 ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
+        "_id" : 6,
+        "level" : "level0",
+        "question" : "For users that use the tab key to navigate websites, what property shows moving from one element to another using this behavior?",
+        "answer"   : "a:visited",
+        "option1" : "a:hover",
+        "option3" : "a:visited",
+        "option2" : "a:focus",
+        "option4" : "a:link"
 
+}
 q07 ={
-	'_id' 		: 	7,
-	'question' 		: 	'0 ques 7 ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
+        "_id" : 7,
+        "level" : "level0",
+        "question" : "The acronym CSS stands for what?",
+        "answer"   : "Cascading Style Sheets",
+        "option1" : "Cascading Style Sheets",
+        "option3" : "Carrot Sytem Style",
+        "option2" : "Correlated Styling System",
+        "option4" : "Canvas Styling System"
 
+}
 q08 ={
-	'_id' 		: 	8,
-	'question' 		: 	'0 ques 8 ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
+        "_id" : 8,
+        "level" : "level0",
+        "question" : "What property would you use to change the list style to show roman numerals instead of normal numbers?",
+        "answer"   : "list-style-type:upper-roman;",
+        "option1" : "list-style-type:upper-roman;",
+        "option3" : "list-type:roman;",
+        "option2" : "list-bullet-type:roman-numerals;",
+        "option4" : "list-style:roman'"
 
+}
 q09 ={
-	'_id' 		: 	9,
-	'question' 		: 	'0 ques 9 ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
+        "_id" : 9,
+        "level" : "level0",
+        "question" : "What property can you use to set the spacing in between lines of text?",
+        "answer"   : "line-height",
+        "option1" : "line-spacing",
+        "option3" : "line-height",
+        "option2" : "spacing",
+        "option4" : "letter-spacing"
 
+}
 q010 ={
-	'_id' 		: 	10,
-	'question' 		: 	'0 ques 10 ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
+        "_id" : 10,
+        "level" : "level0",
+        "question" : "What property do you use to set the background color of an image?",
+        "answer"   : "background-color",
+        "option1" : "color",
+        "option3" : "background-color",
+        "option2" : "background:color",
+        "option4" : "color:background"
 
+}
 collection.insert(q01)
 collection.insert(q02)
 collection.insert(q03)
@@ -122,531 +127,125 @@ collection.insert(q08)
 collection.insert(q09)
 collection.insert(q010)
 
-collection1 = db.level1
+collection = db.level1
+collection.drop()
+q01 ={
+        "_id" : 1,
+        "level" : "level1",
+        "question" : "What does PHP stand for?",
+        "answer"   : "PHP: Hypertext Preprocessor",
+        "option1" : "Processor Handling Program",
+        "option3" : " Program Hypertext Preprocessor",
+        "option2" : "PHP: Hypertext Preprocessor",
+        "option4" : "None Of These"
 
-collection1.drop()
-
-q11 ={
-	'_id' 		: 	1,
-	'question' 		: 	'1 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
 }
-q12 ={
-	'_id' 		: 	2,
-	'question' 		: 	'1 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
+q02 ={
+        "_id" : 2,
+        "level" : "level1",
+        "question" : "Which extension is not a correct PHP file extension?",
+        "answer"   : ".php",
+        "option1" : ".phtml",
+        "option3" : ".php",
+        "option2" : ".php3",
+        "option4" : ".phpRobert"
+
 }
+q03 ={
+        "_id" : 3,
+        "level" : "level1",
+        "question" : " Which of the following is the way to create comments in PHP?",
+        "answer"   : "/* commented code here */",
+        "option1" : "// commented code to end of line",
+        "option3" : "/* commented code here */",
+        "option2" : "# commented code to end of line",
+        "option4" : "all of the above"
 
-q13 ={
-	'_id' 		: 	3,
-	'question' 		: 	'1 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
 }
+q04 ={
+        "_id" : 4,
+        "level" : "level1",
+        "question" : "Which of the following is used to declare a constant",
+        "answer"   : "const",
+        "option1" : "#pragma",
+        "option3" : "constant",
+        "option2" : "const",
+        "option4" : "define"
 
-q14 ={
-	'_id' 		: 	4,
-	'question' 		: 	'1 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
 }
+q05 ={
+        "_id" : 5,
+        "level" : "level1",
+        "question" : "The following are components of a database except ________ .",
+        "answer"   : "reports",
+        "option1" : "user data",
+        "option3" : "metadata",
+        "option2" : "reports",
+        "option4" : "indexes"
 
-q15 ={
-	'_id' 		: 	5,
-	'question' 		: 	'1 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
 }
+q06 ={
+        "_id" : 6,
+        "level" : "level1",
+        "question" : "SQL stands for ________ .",
+        "answer"   : "Structured Query Language",
+        "option1" : "Sequential Query Language",
+        "option3" : "Structured Question Language",
+        "option2" : "Structured Query Language",
+        "option4" : "Sequential Question Language"
 
-collection1.insert(q11)
-collection1.insert(q12)
-collection1.insert(q13)
-collection1.insert(q14)
-collection1.insert(q15)
-
-collection2 = db.level2 
-
-collection2.drop()
-
-q21 ={
-	'_id' 		: 	1,
-	'question' 		: 	' 2 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
 }
-q22 ={
-	'_id' 		: 	2,
-	'question' 		: 	'2 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
+q07 ={
+        "_id" : 7,
+        "level" : "level1",
+        "question" : "The command to remove rows from a table 'CUSTOMER' is:",
+        "answer"   : "'DELETE FROM CUSTOMER WHERE'",
+        "option1" : "REMOVE FROM CUSTOMER",
+        "option3" : "DROP FROM CUSTOMER '",
+        "option2" : "'DELETE FROM CUSTOMER WHERE'",
+        "option4" : "'UPDATE FROM CUSTOMER' "
+
 }
+q08 ={
+        "_id" : 8,
+        "level" : "level1",
+        "question" : "SQL data definition commands make up a(n) ________ .",
+        "answer"   : "DDL",
+        "option1" : "DDM",
+        "option3" : "DDL",
+        "option2" : "DAL",
+        "option4" : "DCL"
 
-q23 ={
-	'_id' 		: 	3,
-	'question' 		: 	'2 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
 }
+q09 ={
+        "_id" : 9,
+        "level" : "level1",
+        "question" : "Which of the following is valid SQL for an Index?",
+        "answer"   : "CREATE INDEX ID",
+        "option1" : "REMOVE INDEX ID",
+        "option3" : "ADD INDEX ID;",
+        "option2" : "CREATE INDEX ID;",
+        "option4" : "CHANGE INDEX ID"
 
-q24 ={
-	'_id' 		: 	4,
-	'question' 		: 	'2 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
 }
+q010 ={
+        "_id" : 10,
+        "level" : "level1",
+        "question" : "Which one of the following sorts rows in SQL?",
+        "answer"   : "ORDER BY",
+        "option1" : "SORT BY",
+        "option3" : "ALIGN BY",
+        "option2" : "ORDER BY",
+        "option4" : "GROUP BY"
 
-q25 ={
-	'_id' 		: 	5,
-	'question' 		: 	'2 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
 }
-
-collection2.insert(q21)
-collection2.insert(q22)
-collection2.insert(q23)
-collection2.insert(q24)
-collection2.insert(q25)
-
-collection3 = db.level3 
-
-collection3.drop()
-
-q31 ={
-	'_id' 		: 	1,
-	'question' 		: 	'3 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-}
-q32 ={
-	'_id' 		: 	2,
-	'question' 		: 	'3 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-}
-
-q33 ={
-	'_id' 		: 	3,
-	'question' 		: 	'3 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-}
-
-q34 ={
-	'_id' 		: 	4,
-	'question' 		: 	'3 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-}
-
-q35 ={
-	'_id' 		: 	5,
-	'question' 		: 	'3 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
-
-collection3.insert(q31)
-collection3.insert(q32)
-collection3.insert(q33)
-collection3.insert(q34)
-collection3.insert(q35)
-
-collection4 = db.level4 
-
-collection4.drop()
-
-q41 ={
-	'_id' 		: 	1,
-	'question' 		: 	'4 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-}
-q42 ={
-	'_id' 		: 	2,
-	'question' 		: 	'4 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-}
-
-q43 ={
-	'_id' 		: 	3,
-	'question' 		: 	'4 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-}
-
-q44 ={
-	'_id' 		: 	4,
-	'question' 		: 	'4 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-}
-
-q45 ={
-	'_id' 		: 	5,
-	'question' 		: 	'4 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
-
-collection4.insert(q41)
-collection4.insert(q42)
-collection4.insert(q43)
-collection4.insert(q44)
-collection4.insert(q45)
-
-collection5 = db.level5 
-collection5.drop()
-
-q51 ={
-	'_id' 		: 	1,
-	'question' 		: 	'5 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-}
-q52 ={
-	'_id' 		: 	2,
-	'question' 		: 	'5 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-}
-
-q53 ={
-	'_id' 		: 	3,
-	'question' 		: 	'5 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-}
-
-q54 ={
-	'_id' 		: 	4,
-	'question' 		: 	'5 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-}
-
-q55 ={
-	'_id' 		: 	5,
-	'question' 		: 	'5 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
-
-collection5.insert(q51)
-collection5.insert(q52)
-collection5.insert(q53)
-collection5.insert(q54)
-collection5.insert(q55)
-
-collection6 = db.level6 
-collection6.drop()
-
-q61 ={
-	'_id' 		: 	1,
-	'question' 		: 	'6 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-}
-q62 ={
-	'_id' 		: 	2,
-	'question' 		: 	'6 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-}
-
-q63 ={
-	'_id' 		: 	3,
-	'question' 		: 	'6 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-}
-
-q64 ={
-	'_id' 		: 	4,
-	'question' 		: 	'6 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-}
-
-q65 ={
-	'_id' 		: 	5,
-	'question' 		: 	'6 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
-
-collection6.insert(q61)
-collection6.insert(q62)
-collection6.insert(q63)
-collection6.insert(q64)
-collection6.insert(q65)
-
-collection7 = db.level7 
-collection7.drop()
-
-q71 ={
-	'_id' 		: 	1,
-	'question' 		: 	'7 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-}
-q72 ={
-	'_id' 		: 	2,
-	'question' 		: 	'7 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-}
-
-q73 ={
-	'_id' 		: 	3,
-	'question' 		: 	'7 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-}
-
-q74 ={
-	'_id' 		: 	4,
-	'question' 		: 	'7 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-}
-
-q75 ={
-	'_id' 		: 	5,
-	'question' 		: 	'7 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
-
-collection7.insert(q71)
-collection7.insert(q72)
-collection7.insert(q73)
-collection7.insert(q74)
-collection7.insert(q75)
-
-collection8 = db.level8
-
-collection8.drop()
-
-q81 ={
-	'_id' 		: 	1,
-	'question' 		: 	'8 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-}
-q82 ={
-	'_id' 		: 	2,
-	'question' 		: 	'8 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-}
-
-q83 ={
-	'_id' 		: 	3,
-	'question' 		: 	'8 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-}
-
-q84 ={
-	'_id' 		: 	4,
-	'question' 		: 	'8 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-}
-
-q85 ={
-	'_id' 		: 	5,
-	'question' 		: 	'8 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
-
-collection8.insert(q81)
-collection8.insert(q82)
-collection8.insert(q83)
-collection8.insert(q84)
-collection8.insert(q85)
-
-collection9 = db.level9
-
-collection9.drop()
-
-q91 ={
-	'_id' 		: 	1,
-	'question' 		: 	'9 What is your age ?',
-	'option1' 	: 	'21',
-	'option2' 	: 	'22',
-	'option3' 	: 	'23',
-	'option4' 	: 	'24',
-	'answer'	: 	'21',
-}
-q92 ={
-	'_id' 		: 	2,
-	'question' 		: 	'9 What is your name ?',
-	'option1' 	: 	'af',
-	'option2' 	: 	'bd',
-	'option3' 	: 	'ca',
-	'option4' 	: 	'dq',
-	'answer'	: 	'bd',
-}
-
-q93 ={
-	'_id' 		: 	3,
-	'question' 		: 	'9 What is your class ?',
-	'option1' 	: 	'12',
-	'option2' 	: 	'11',
-	'option3' 	: 	'10',
-	'option4' 	: 	'9',
-	'answer'	: 	'11',
-}
-
-q94 ={
-	'_id' 		: 	4,
-	'question' 		: 	'9 What is your profession ?',
-	'option1' 	: 	'doc',
-	'option2' 	: 	'paint',
-	'option3' 	: 	'eng',
-	'option4' 	: 	'web',
-	'answer'	: 	'doc',
-}
-
-q95 ={
-	'_id' 		: 	5,
-	'question' 		: 	'9 What is your color ?',
-	'option1' 	: 	'red',
-	'option2' 	: 	'green',
-	'option3' 	: 	'blue',
-	'option4' 	: 	'pink',
-	'answer'	: 	'red',
-}
-
-collection9.insert(q91)
-collection9.insert(q92)
-collection9.insert(q93)
-collection9.insert(q94)
-collection9.insert(q95)
-
+collection.insert(q01)
+collection.insert(q02)
+collection.insert(q03)
+collection.insert(q04)
+collection.insert(q05)
+collection.insert(q06)
+collection.insert(q07)
+collection.insert(q08)
+collection.insert(q09)
+collection.insert(q010)

@@ -4,14 +4,26 @@ import codecs
 client = MongoClient()
 db = client.coadmire
 
-admin_level = "level4"
+db.level0.drop()
+db.level1.drop()
+db.level2.drop()
+db.level3.drop()
+db.level4.drop()
+db.level5.drop()
+db.level6.drop()
+db.level7.drop()
+db.level8.drop()
+db.level9.drop()
+
+'''
+admin_level = "level5"
 admin_collection = db[admin_level]
 
 
 ida = admin_collection.count()
 print (ida+1)
 
-'''
+
 db.seqs.insert({
     'collection': admin_collection,
     'id': 0

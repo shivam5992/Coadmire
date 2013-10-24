@@ -8,7 +8,7 @@ client = MongoClient()
 db = client.coadmire
 
 #set these variables
-max_questions = 4
+max_questions = 10
 positive_marks_for_question = 4
 negative_marks_for_question = 1
 duration = 1
@@ -126,11 +126,11 @@ def coadtest():
 		level = "level" + str(level_id)
 		collection = db[level]
 		
-		Ques_id = random.randrange(1,5)
+		Ques_id = random.randrange(1,10)
 		this_ques = level+"."+str(Ques_id)
 
 		while this_ques in questions_asked_so_far:
-			Ques_id = random.randrange(1,5)
+			Ques_id = random.randrange(1,10)
 			this_ques = level+"."+str(Ques_id)
 			
 		questions_asked_so_far.append(this_ques)
@@ -155,12 +155,7 @@ def admin():
 		admin_option4 = request.form['option4']
 		admin_answer = request.form['answer']
 		admin_level = request.form['level']
-		
 		admin_collection = db[admin_level]
-
-		#admin_temp = db.admin_collection.find().sort( [("_id", -1)] ).limit(1)
-		#for ad_doc in admin_temp:
-		#	ad_doc['_id'] = str(int(ad_doc['_id']) + 1)
 
 		ida = admin_collection.count()
 		admin_id = ida+1
