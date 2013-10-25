@@ -21,9 +21,15 @@ All the responses are smartly captured in the database.
 Technologies Impemented
 =======================
 Python - Flask
+
 MongoDb
+
 Javascript
 
 FrontEnd
 ========
 Bootstrap
+
+HTML5
+
+CSS#
