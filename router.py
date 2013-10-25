@@ -50,6 +50,7 @@ def login():
 		else:
 			session['logged_in'] = True
 			count = 0
+			level_id = 1
 			questions_asked_so_far = []
 
 			current_hour = datetime.datetime.now().strftime("%H")

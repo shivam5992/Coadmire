@@ -3,19 +3,18 @@
 <style type="text/css">
 #hello
 {
-    width:300px;
     height:25px;
     background-color:blue;
     border:2 solid black;
     transition: width 1s;
-    float: right;
-    margin-top: 20px;
+    margin-left: 600px;
+    margin-top: 60px;
 }
 </style>
 
  <script type="text/javascript" src="static/js/jquery.countdown.js"></script>
  <script type="text/javascript" src="static/js/timer.js"></script>
-<div class="container" >
+<div class="container">
 
     <div class="countdown simple pull-right"></div>
     <h1 align=center> CoadMire </h1><br>
@@ -30,7 +29,7 @@
         	{% endfor %}
         <div id="level_disp"><font color="red"><b> Current Level</b></font> = <font color="green">{{ doc.level }}</font>
         </div>
-        <div id="hello">k</div>
+        <div id="hello"></div>
         <div id="fouroptions">
         <input type="radio" id="option1" name="ques_response" value="{{ doc.option1 }}" required>
         <label for="option1">{{ doc.option1 }}</label><br>
@@ -42,10 +41,11 @@
         <label for="option4">{{ doc.option4 }}</label><br>
         <input type="radio" id="option5" name="ques_response" value="not_answered" required>
         <label for="option5">Skip This Question</label>
-        </div>
         <br>
         <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+                </div>
+
     </div>
 </div>
 
