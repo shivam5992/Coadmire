@@ -37,6 +37,7 @@ def login_required(test):
 @app.route('/logout')
 def logout():
 	session.pop('logged_in',None)
+	session.pop('yourname',None)
 	return redirect (url_for('index'))
 
 @app.route('/login',methods=['GET','POST'])
@@ -45,10 +46,11 @@ def login():
 	global count
 	global questions_asked_so_far 
 	if request.method == 'POST':
-		if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+		if request.form['password'] != 'admin':
 			error = 'Invalid credientials, Please try again'
 		else:
 			session['logged_in'] = True
+			session['yourname'] = request.form['username']
 			count = 0
 			level_id = 1
 			questions_asked_so_far = []
@@ -75,8 +77,7 @@ def login():
 @login_required
 def coadtest(): 
 	resp = None
-	user_name = "shivam"
-	user_id =  "10103475"
+	user_name = session['yourname']
 	global level_id
 	global count 
 	global user_score_so_far
@@ -98,7 +99,7 @@ def coadtest():
 				user_score_so_far -= negative_marks_for_question
 
 		# store result for a particular user, store each question as docs
-		userResponse = "ResponseOf"+user_name+user_id
+		userResponse = "ResponseOf"+user_name
 		
 		user_level = level
 		user_question = request.form['question']
@@ -109,7 +110,6 @@ def coadtest():
 		collection = db[userResponse]
 		result_doc ={
 		'userName' : user_name,
-		'UserId'  :  user_id,
 		'level':	 user_level,
 		'question' : user_question,
 		'answer' :   user_answer,
