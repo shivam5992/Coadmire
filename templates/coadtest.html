@@ -10,6 +10,11 @@
     margin-left: 600px;
     margin-top: 60px;
 }
+#ruler
+{
+    margin-left: 600px;
+    padding: 0px;
+}
 </style>
 
  <script type="text/javascript" src="static/js/jquery.countdown.js"></script>
@@ -29,7 +34,20 @@
         	{% endfor %}
         <div id="level_disp"><font color="red"><b> Current Level</b></font> = <font color="green">{{ doc.level }}</font>
         </div>
-        <div id="hello"></div>
+     <div id="hello">
+
+     </div>
+     <div id="ruler">
+        <pre>
+       |______|______|______|_____|_____|_____|
+       1      2      3      4     5     6     7
+</pre> 
+ </div>
+
+     
+        
+        
+
         <div id="fouroptions">
         <input type="radio" id="option1" name="ques_response" value="{{ doc.option1 }}" required>
         <label for="option1">{{ doc.option1 }}</label><br>
@@ -51,7 +69,7 @@
 
 <script type="text/javascript">
     var level_id = "{{ doc.level }}";
-    var sty = level_id[5]*100 + 'px'
+    var sty = level_id[5]*50 + 'px'
 document.getElementById("hello").style.width = sty;
 </script>
 {% endblock %}
