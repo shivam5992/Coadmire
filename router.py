@@ -123,7 +123,9 @@ def coadtest():
 	count += 1
 	if count == max_questions+1:
 		count = 0
-		return render_template('finished.html')
+		temp = "ResponseOf"+session['yourname']
+		report = db[temp]
+		return render_template('finished.html',report = report)
 	else:	
 		flash(count)
 		level = "level" + str(level_id)
@@ -147,6 +149,7 @@ def index():
 @app.route('/instructions')
 def instructions():
 	return render_template('instructions.html')
+
 
 @app.route('/admin',methods=['GET','POST'])
 def admin():

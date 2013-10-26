@@ -496,7 +496,7 @@ collection.insert(q8)
 collection.insert(q9)
 collection.insert(q10)
 
-collection = db.level5xxxxxxxxxxxxx
+collection = db.level5
 collection.drop()
 
 q1 ={
