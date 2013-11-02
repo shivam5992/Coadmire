@@ -33,3 +33,10 @@ Bootstrap
 HTML5
 
 CSS3
+
+Bugs (submit patches)
+=======
+* If timer expires test the window.
+* User cannot go back after logout and after answering each question.
+* Timer 11'o clock error.
+* All level1 questions display error.
