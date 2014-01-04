@@ -1,3 +1,10 @@
+'''
+Script to load the mongoDb database with 100 questions of different levels.
+Author: Shivam Bansal
+email: shivam5992@gmail.com 
+version: 0.3
+'''
+
 from pymongo import MongoClient
 import codecs
 

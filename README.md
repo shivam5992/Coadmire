@@ -1,8 +1,8 @@
 CoadMire
 ========
 
-About
-=====
+**About**
+
 Coadmire is an online test platform developed and designed espically to give a better experince to both users and admins.
 It supports the feature of adaptability ie. dynamic level transitions while the test is in progress.
 It adapts according to the examinee's ability level. 
@@ -11,32 +11,26 @@ from previous questions.
 From the examinee's perspective, the difficulty of the exam seems to tailor itself to his or her level of ability
 Current levels are displayed interactivly on the test screen.
 
-Backend
-=======
+**Backend**
+
 Codemire test starts from basic level and progress according to the responses submitted by the user.
 With every correct response, level increases by one and with every wrong a answer, level decreases by one.
 All the responses are smartly captured in the database.
 
+**Instructions to initiate the project**
 
-Technologies Impemented
-=======================
-Python - Flask
+1. Install pymongo using command: 
+	
+	pip install pymongo
 
-MongoDb
+2. Before runnig the script, create a local server of mongoDb on your PC.
+	
+	mongod --dbpath /path/
 
-Javascript
+3. Run the script question_data.py to laod the mongodb database with 100 documents of questions, answers and options.
 
-FrontEnd
-========
-Bootstrap
+	python question_data.py
 
-HTML5
-
-CSS3
-
-Bugs (submit patches)
-=======
-* If timer expires test the window.
-* User cannot go back after logout and after answering each question.
-* Timer 11'o clock error.
-* All level1 questions display error.
+4. Run the router.py script and check out the page in web browser.
+	
+	python router.py

@@ -1,20 +1,40 @@
+'''
+Router file : coadmire
+Computerised Adaptability Test Platform built in python - flask and mongodb.
+
+Author: Shivam Bansal 
+Email: shivam5992@gmail.Com 
+version: 0.3
+'''
+
+
 from flask import *
 from functools import wraps
 from pymongo import MongoClient
 import random
 import datetime
 
+'''
+Connection with mongodb server
+'''
 client = MongoClient()
 db = client.coadmire
 
-#set these variables
-max_questions = 10
-positive_marks_for_question = 4
-negative_marks_for_question = 1
-duration = 1
-max_level = 5
-min_level = 1
 
+'''
+Global Variables according to test.
+'''
+max_questions = 10	# maximum number of questoins in a test(Set it equal to maximul level)
+positive_marks_for_question = 4	# positive marks for correct answer
+negative_marks_for_question = 1 # negative marks for incorrect answer
+duration = 1 	# duration of test in hours
+max_level = 5	# highest level number
+min_level = 1 	# lowest level number
+
+
+'''
+Do not alter the following variables
+'''
 level_id = 1
 count = 0
 user_score_so_far = 0
@@ -23,7 +43,10 @@ questions_asked_so_far = []
 app = Flask(__name__)
 app.secret_key = 'shivam_bansal'
 
-#login Actions !!
+
+'''
+Login Actions 
+'''
 def login_required(test):
 	@wraps(test)
 	def wrap(*args, **kwargs):
@@ -34,11 +57,13 @@ def login_required(test):
 			return redirect(url_for('login'))
 	return wrap
 
+
 @app.route('/logout')
 def logout():
 	session.pop('logged_in',None)
 	session.pop('yourname',None)
 	return redirect (url_for('index'))
+
 
 @app.route('/login',methods=['GET','POST'])
 def login():
@@ -55,9 +80,10 @@ def login():
 			level_id = 1
 			questions_asked_so_far = []
 
-			current_hour = datetime.datetime.now().strftime("%H")
+			current_time = datetime.datetime.now()
+			current_hour = current_time.strftime("%H")
 			timer = int(current_hour)+duration
-			send_time = datetime.datetime.now().strftime("%B %d, %Y ") + str(timer) + datetime.datetime.now().strftime(":%M:%S")
+			send_time = current_time.strftime("%B %d, %Y ") + str(timer) + current_time.strftime(":%M:%S")
 			
 			strtime = 'var endDate = "' + send_time + '";//'
 			new_content = ""
@@ -73,6 +99,10 @@ def login():
 			return redirect(url_for('coadtest'))
 	return render_template('login.html',error=error)
 
+
+'''
+Function which starts the test
+'''
 @app.route('/coadtest',methods=['GET','POST'])
 @login_required
 def coadtest(): 
@@ -98,15 +128,16 @@ def coadtest():
 					level_id -= 1
 				user_score_so_far -= negative_marks_for_question
 
-		# store result for a particular user, store each question as docs
-		userResponse = "ResponseOf"+user_name
 		
+		'''
+		Store result for a particular user, store each question as docs
+		'''
+		userResponse = "ResponseOf"+user_name	
 		user_level = level
 		user_question = request.form['question']
 		user_answer = pdoc['answer']
 		user_response = request.form['ques_response']
 		user_result = user_score_so_far
-		
 		collection = db[userResponse]
 		result_doc ={
 		'userName' : user_name,
@@ -118,8 +149,10 @@ def coadtest():
 		}
 		collection.insert(result_doc)
 		
-		
-	# new question
+	
+	'''
+	Ask a new question
+	'''
 	count += 1
 	if count == max_questions+1:
 		count = 0
@@ -142,15 +175,24 @@ def coadtest():
 		doc = collection.find_one({ '_id' : Ques_id })
 		return render_template('coadtest.html',doc =  doc)	
 
+
+'''
+Homepage
+'''
 @app.route('/')
 def index():
 	return render_template('index.html')	
 
+'''
+Instruction Page
+'''
 @app.route('/instructions')
 def instructions():
 	return render_template('instructions.html')
 
-
+'''
+Admin Panel
+'''
 @app.route('/admin',methods=['GET','POST'])
 def admin():
 	if request.method == 'POST':
@@ -180,6 +222,9 @@ def admin():
 		admin_collection.insert(admin_doc)
 
 	return render_template('admin.html')
-		
+
+'''
+Start the server
+'''		
 if __name__ == '__main__' :
 	app.run(debug=True)
